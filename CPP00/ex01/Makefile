@@ -1,7 +1,7 @@
 NAME    =	PhoneBook
 
-SRCS    =	main.cpp    \
-		Contact.cpp  \
+SRCS    =	main.cpp      \
+		Contact.cpp   \
 		PhoneBook.cpp \
 
 OBJS    =	$(SRCS:.cpp=.o)
@@ -15,16 +15,16 @@ RM	=	rm -rf
 all: $(NAME)
 
 $(NAME): $(OBJS)
-                $(CXX) -o $(NAME) $(OBJS)
+		$(CXX) -o $(NAME) $(OBJS)
 
-.c.o:
-                $(CXX) $(CXXFLAGS) -c $<
+.cpp.o:
+	$(CXX) $(CXXFLAGS) -c $<
 
 clean:
-                $(RM) $(OBJS)
+	$(RM) $(OBJS)
 
 fclean: clean
-        $(RM) $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
 

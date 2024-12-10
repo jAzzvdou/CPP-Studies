@@ -7,14 +7,16 @@ int	main(void)
 	std::string	command;
 
 	std::cout << "Welcome to the phone book!" << std::endl;
-	while (1)
+	while (!std::cin.eof())
 	{
 		std::cout << "Enter a command: ADD, SEARCH or EXIT." << std::endl;
 		std::getline(std::cin, command);
 
 		while (command != "ADD" || command != "SEARCH" || command != "EXIT")
+		{
 			std::cout << "Invalid command, try again: " << std::endl;
 			std::getline(std::cin, command);
+		}
 
 		if (command == "ADD")
 			phoneBook.addContact();
@@ -25,4 +27,3 @@ int	main(void)
 	}
 	return (0);
 }
-```

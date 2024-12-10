@@ -13,12 +13,12 @@ class PhoneBook
                 ~PhoneBook(); //| Destrutor
 
 		//|----------| Métodos |----------|//
-		void	addContact(void);
-		void	searchContact(void); const;
+		void addContact(void);
+		void searchContact(void) const;
+		void displayContacts(void) const;
 
         private:
-		Contact	_contact[8];
-		_contact[i].display();
+		Contact	_contacts[8];
 };
 
 #endif //| PHONEBOOK_HPP

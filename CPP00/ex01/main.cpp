@@ -9,14 +9,8 @@ int	main(void)
 	std::cout << "Welcome to the phone book!" << std::endl;
 	while (!std::cin.eof())
 	{
-		std::cout << "Enter a command: ADD, SEARCH or EXIT." << std::endl;
+		std::cout << "Enter a command: ADD, SEARCH or EXIT: " << std::endl;
 		std::getline(std::cin, command);
-
-		while (command != "ADD" || command != "SEARCH" || command != "EXIT")
-		{
-			std::cout << "Invalid command, try again: " << std::endl;
-			std::getline(std::cin, command);
-		}
 
 		if (command == "ADD")
 			phoneBook.addContact();
@@ -25,5 +19,6 @@ int	main(void)
 		else if (command == "EXIT")
 			break ;
 	}
+
 	return (0);
 }

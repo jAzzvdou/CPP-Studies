@@ -10,8 +10,7 @@ void	getField(std::string &field, const std::string &message)
 	{
 		std::cout << message << std::endl;
 		std::getline(std::cin, field);
-	}
-	while (!std::cin.eof() && field.empty());
+	}	while (!std::cin.eof() && field.empty());
 }
 
 void	PhoneBook::addContact(void)
@@ -46,24 +45,23 @@ void	PhoneBook::displayContacts(void) const
 	for (int i = 0; i < 8; i++)
 	{
 		std::cout << std::setw(10) << i << "|";
-		this->_contacts[i].displayFull();
+		this->_contacts[i].displayShort();
 	}
 }
 
 void	PhoneBook::searchContact(void) const
 {
 	this->displayContacts();
-	std::string index;
 
+	std::string index;
 	do
 	{
 		std::cout << "Enter the index of the contact you want to see: ";
 		std::getline(std::cin, index);
-	}
-	while (!std::cin.eof() && (index.size() != 1 || index[0] < '0' || index[0] > '7'));
+	}	while (!std::cin.eof() && (index.empty() || index.size() != 1 || index[0] < '0' || index[0] > '7'));
 
 	int i = index[0] - '0';
-	this->_contacts[i].displayShort();
+	this->_contacts[i].displayFull();
 }
 
 PhoneBook::~PhoneBook() //| Destrutor

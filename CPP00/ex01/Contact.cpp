@@ -18,11 +18,18 @@ Contact::Contact(const std::string &first_name,
 {
 }
 
+std::string verifyLength(const std::string &field)
+{
+	if (field.length() > 10)
+		return (field.substr(0, 9) + ".");
+	return (field);
+}
+
 void Contact::displayShort(void) const 
 {
-	std::cout << std::setw(10) << this->_first_name << "|";
-	std::cout << std::setw(10) << this->_last_name << "|";
-	std::cout << std::setw(10) << this->_nickname << "|" << std::endl;
+	std::cout << std::setw(10) << verifyLength(this->_first_name) << "|";
+	std::cout << std::setw(10) << verifyLength(this->_last_name) << "|";
+	std::cout << std::setw(10) << verifyLength(this->_nickname) << "|" << std::endl;
 }
 
 void Contact::displayFull(void) const

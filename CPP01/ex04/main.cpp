@@ -1,9 +1,10 @@
+#include <fstream>
 #include "Replace.hpp" 
 
 void err(const std::string error)
 {
 	//| 'cerr' é a saída de erro.
-	std::cout << error << std::endl;
+	std::cerr << error << std::endl;
 }
 
 int main(int ac, char **av)
@@ -24,20 +25,21 @@ int main(int ac, char **av)
 	while (std::getline(ifs, input))
 	{
 		//| Fazendo o replace de cada linha, se der.
-		result += Replace::replace(input, av[2], av[3]);
+		result += replace(input, av[2], av[3]);
 		if (ifs.eof())
 			result += "\n";
 	}
 	//| Fechando o arquivo lido.
-	ifs.close()
-
-	if (!result)
+	ifs.close();
+	if (result.empty())
 		return (err("<string1> does not have any match with <string2> in <filename>."), 3);
-
+	
+	std::string outfile = std::string(av[1]) + ".replace";
 	//| Abrindo o arquivo para escrita.
-	std::ofstream ofs(av[1] + ".replace");
+	std::ofstream ofs(outfile.c_str());
 	if (!ofs)
 		return (err("Error! Invalid Output File."), 4);
+	//| Escrevendo o resultado no arquivo.
 	ofs << result;
 	//| Fechando o arquivo escrito.
 	ofs.close();

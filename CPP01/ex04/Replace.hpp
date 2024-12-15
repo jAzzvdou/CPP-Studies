@@ -6,12 +6,11 @@
 class Replace
 {
 	public:
-		Replace::Replace(); //| Construtor
-		Replace::~Replace(); //| Destrutor
-
-		//|---------| Método |----------|//
-		std::string Replace::replace(std::string input, std::string s1, std::string s2);
+		Replace(); //| Construtor
+		~Replace(); //| Destrutor
 	private:
 };
+
+std::string replace(std::string input, std::string s1, std::string s2);
 
 #endif //| REPLACE_HPP

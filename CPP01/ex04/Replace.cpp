@@ -8,19 +8,19 @@ Replace::~Replace() //| Destrutor
 {
 }
 
-std::string Replace::replace(std::string input, std::string s1, std::string s2)
+std::string replace(std::string input, std::string s1, std::string s2)
 {
 	std::string result;
 
 	//| Posição da primeira aparição de 's1' em 'input'.
-	std::size_t foundPos = 0;
+	int foundPos = 0;
 	//| Posição de onde começa a próxima parte de 'input'.
-	std::size_t continuePos = 0;
+	int continuePos = 0;
 	//| Tamanho de 's1' para atualizar a posição da procura.
-	std::size_t addLen = s1.length();
+	int addLen = s1.length();
 
-	std::size_t len = input.length();
-	for (std::size_t i = 0; i < len; i++)
+	int len = input.length();
+	for (int i = 0; i < len; i++)
 	{
 		//| Procurando 's1' em 'input'.
 		foundPos = input.find(s1, foundPos);

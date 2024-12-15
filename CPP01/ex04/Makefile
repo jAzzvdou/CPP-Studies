@@ -1,4 +1,4 @@
-NAME	=	Replace
+NAME	=	SedIsForLosers
 
 SRCS	=	main.cpp    \
 		Replace.cpp \

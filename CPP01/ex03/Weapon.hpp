@@ -10,10 +10,10 @@ class Weapon
 		~Weapon(); //| Destrutor
 
 		//|----------| Métodos |----------|//
-		const std::string &getType const;
+		const std::string &getType() const;
 		void setType(const std::string &type);
 	private:
 		std::string _type;
-}
+};
 
 #endif //| WEAPON_HPP

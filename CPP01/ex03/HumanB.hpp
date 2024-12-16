@@ -9,8 +9,8 @@ class HumanB
 		HumanB(const std::string &name); //| Construtor
 		~HumanB(); //| Destrutor
 
+		void setWeapon(const Weapon &weapon); //| Setter
 		//|----------| Método |----------|//
-		void setWeapon(const Weapon &weapon);
 		void attack() const;
 	private:
 		std::string _name;

@@ -5,16 +5,16 @@ Weapon::Weapon(const std::string &name): //| Construtor
 {
 }
 
-Weapon::~Weapon()
+Weapon::~Weapon() //| Destrutor
 {
+}
+
+void Weapon::setType(const std::string &type) //| Setter
+{
+	this->_type = type;
 }
 
 const std::string &Weapon::getType() const //| Getter
 {
 	return (this->_type);
-}
-
-void Weapon::setType(const std::string &type)
-{
-	this->_type = type;
 }

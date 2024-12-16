@@ -1,3 +1,4 @@
+#include <iostream>
 #include "Zombie.hpp"
 
 Zombie::Zombie(): //| Construtor
@@ -5,7 +6,7 @@ Zombie::Zombie(): //| Construtor
 {
 }
 
-Zombie::Zombie(std::string name):
+Zombie::Zombie(const std::string &name):
                 _name(name)
 {
 }
@@ -20,7 +21,7 @@ void Zombie::announce()
         std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
-void Zombie::setName(std::string name) //| Setter
+void Zombie::setName(const std::string &name) //| Setter
 {
 	this->_name = name;
 }

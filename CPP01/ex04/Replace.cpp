@@ -1,14 +1,6 @@
 #include "Replace.hpp"
 
-Replace::Replace() //| Construtor
-{
-}
-
-Replace::~Replace() //| Destrutor
-{
-}
-
-std::string replace(std::string input, std::string s1, std::string s2)
+std::string Replace::replace(const std::string &input, const std::string &s1, const std::string &s2)
 {
 	std::string result;
 

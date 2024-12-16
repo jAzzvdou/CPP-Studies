@@ -1,7 +1,7 @@
 #ifndef WEAPON_HPP
 # define WEAPON_HPP
 
-#include <iostream>
+#include <string>
 
 class Weapon
 {
@@ -9,9 +9,8 @@ class Weapon
 		Weapon(const std::string &type); //| Construtor
 		~Weapon(); //| Destrutor
 
-		//|----------| Métodos |----------|//
-		const std::string &getType() const;
-		void setType(const std::string &type);
+		void setType(const std::string &type); //| Setter
+		const std::string &getType() const; //| Getter
 	private:
 		std::string _type;
 };

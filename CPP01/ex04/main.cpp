@@ -1,13 +1,14 @@
 #include <fstream>
+#include <iostream>
 #include "Replace.hpp" 
 
-void err(const std::string error)
+void	err(const std::string error)
 {
 	//| 'cerr' é a saída de erro.
 	std::cerr << error << std::endl;
 }
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
 	if (ac != 4)
 		return (err("Error! Usage: ./SedIsForLosers <filename> <string1> <string2>"), 1);
@@ -25,7 +26,7 @@ int main(int ac, char **av)
 	while (std::getline(ifs, input))
 	{
 		//| Fazendo o replace de cada linha, se der.
-		result += replace(input, av[2], av[3]);
+		result += Replace::replace(input, av[2], av[3]);
 		if (ifs.eof())
 			result += "\n";
 	}

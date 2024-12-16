@@ -1,3 +1,4 @@
+#include <iostream>
 #include "Zombie.hpp"
 
 Zombie::Zombie(): //| Construtor
@@ -5,7 +6,7 @@ Zombie::Zombie(): //| Construtor
 {
 }
 
-Zombie::Zombie(std::string name):
+Zombie::Zombie(const std::string &name):
 		_name(name)
 {
 }

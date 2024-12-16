@@ -10,7 +10,7 @@ class HumanA
 		~HumanA(); //| Destrutor
 
 		//|----------| Método |----------|//
-		void attack();
+		void attack() const;
 	private:
 		std::string _name;
 		Weapon &_weapon;

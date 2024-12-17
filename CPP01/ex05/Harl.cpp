@@ -1,5 +1,4 @@
 #include <iostream>
-#include <map>
 #include "Harl.hpp"
 
 Harl::Harl() //| Construtor
@@ -39,30 +38,14 @@ void Harl::complain( std::string level )
 
 	//| Array de ponteiros para funções.
 	void (Harl::*ptrF[4])( void ) const = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	std::string levels[5] = {"DEBUG", "INFO", "WARNING", "ERROR", ""};
 
-	//| Map é uma estrutura de dados que armazena pares chave-valor, como um dicionário.
-	std::map<std::string, int> map;
-	map["DEFAULT"] = 0;
-	map["DEBUG"] = 1;
-	map["INFO"] = 2;
-	map["WARNING"] = 3;
-	map["ERROR"] = 4;
-
-	switch (map[level])
+	for (int i = 0; levels[i] != ""; i++)
 	{
-		case 1:
-			(this->*ptrF[0])();
-			break;
-		case 2:
-			(this->*ptrF[1])();
-			break;
-		case 3:
-			(this->*ptrF[2])();
-			break;
-		case 4:
-			(this->*ptrF[3])();
-			break;
-		default:
-			break;
+		if (levels[i] == level)
+		{
+			(this->*ptrF[i])();
+			return ;
+		}
 	}
 }

@@ -12,6 +12,7 @@ int	main(void)
 
 	//| Testando uma reclamação inválida.
 	harl.complain("invalid");
+	harl.complain("");
 
 	return (0);
 }

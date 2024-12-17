@@ -1,3 +1,5 @@
+#include <iostream>
+#include <iomanip>
 #include "Contact.hpp"
 
 Contact::Contact() //| Construtor

@@ -1,5 +1,4 @@
 #include <iostream>
-#include <map>
 #include "Harl.hpp"
 
 Harl::Harl() //| Construtor
@@ -37,36 +36,29 @@ void Harl::complain( std::string level )
 	for (int i = 0; i < len; i++)
 		level[i] = toupper(level[i]);
 
-	//| Array de ponteiros para funções.
-	void (Harl::*ptrF[4])( void ) const = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+        //| Array de ponteiros para funções.
+        void (Harl::*ptrF[4])( void ) const = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 
-	//| Map é uma estrutura de dados que armazena pares chave-valor, como um dicionário.
-	std::map<std::string, int> map;
-	map["DEFAULT"] = 0;
-	map["DEBUG"] = 1;
-	map["INFO"] = 2;
-	map["WARNING"] = 3;
-	map["ERROR"] = 4;
-
-	switch (map[level])
+	if (level != "DEBUG" && level != "INFO" && level != "WARNING" && level != "ERROR")
 	{
-		case 1:	std::cout << "[ DEBUG ]" << std::endl;
+		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+		return ;
+	}
+	switch (level[0])
+	{
+		case 'D':
 			(this->*ptrF[0])();
-			std::cout << std::endl;
 			break;
-		case 2:	std::cout << "[ INFO ]" << std::endl;
+		case 'I':
 			(this->*ptrF[1])();
-			std::cout << std::endl;
 			break;
-		case 3:	std::cout << "[ WARNING ]" << std::endl;
+		case 'W':
 			(this->*ptrF[2])();
-			std::cout << std::endl;
 			break;
-		case 4:	std::cout << "[ ERROR ]" << std::endl;
+		case 'E':
 			(this->*ptrF[3])();
-			std::cout << std::endl;
 			break;
-		default:	std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+		default:
 			break;
 	}
 }

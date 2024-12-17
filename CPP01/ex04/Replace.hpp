@@ -1,7 +1,7 @@
 #ifndef REPLACE_HPP
 # define REPLACE_HPP
 
-#include <string>
+# include <string>
 
 class Replace
 {

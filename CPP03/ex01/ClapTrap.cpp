@@ -27,6 +27,23 @@ ClapTrap::~ClapTrap()
 	std::cout << "| Default Destructor Called |" << std::endl;
 }
 
+ClapTrap::ClapTrap(const ClapTrap &other)
+{
+	std::cout << "| Copy Constructor Called |" << std::endl;
+	*this = other;
+}
+
+ClapTrap &ClapTrap::operator=(const ClapTrap &other)
+{
+	std::cout << "| Copy Assignment Operator Called |" << std::endl;
+
+	this->_name = other._name;
+	this->_hitPoints = other._hitPoints;
+	this->_energyPoints = other._energyPoints;
+	this->_attackDamage = other._attackDamage;
+	return (*this);
+}
+
 void ClapTrap::attack(const std::string &target)
 {
 	if (this->_hitPoints < 1)

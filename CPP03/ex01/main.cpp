@@ -3,8 +3,8 @@
 
 int	main(void)
 {
-	std::cout << "! Testes !" << std::endl;
-	std::cout << "...___---°°°| Testando ClapTrap |°°°---___..." << std::endl;
+	std::cout << "! Tests !" << std::endl;
+	std::cout << "\n...___---°°°| Testing ClapTrap |°°°---___..." << std::endl;
 
 	ClapTrap clap("Clappy");
 	clap.attack("T01");
@@ -13,7 +13,7 @@ int	main(void)
 	clap.takeDamage(3);
 	clap.beRepaired(2);
 
-	std::cout << "...___---°°°| Testando ScavTrap |°°°---___..." << std::endl;
+	std::cout << "\n...___---°°°| Testing ScavTrap |°°°---___..." << std::endl;
 	
 	ScavTrap scav("Scavy");
 	scav.attack("T02");
@@ -22,18 +22,18 @@ int	main(void)
 	scav.takeDamage(30);
 	scav.beRepaired(20);
 
-	std::cout << "...___---°°°| Testando Cópia |°°°---___..." << std::endl;
+	std::cout << "\n...___---°°°| Testing Copy |°°°---___..." << std::endl;
 
 	ScavTrap copy(scav);
 	copy.attack("*Dummy01*");
 
-	std::cout << "...___---°°°| Testando Atribuição |°°°---___..." << std::endl;
+	std::cout << "\n...___---°°°| Testing Assignment |°°°---___..." << std::endl;
 
 	ScavTrap assignment = scav;
 	assignment.attack("*Dummy02*");
 
 
-	std::cout << "...___---°°°| Testando Destruição |°°°---___..." << std::endl;
+	std::cout << "\n...___---°°°| Testing Destructors |°°°---___..." << std::endl;
 
 	return (0);
 }

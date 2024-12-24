@@ -1,0 +1,35 @@
+NAME	=	Animal
+
+SRCS	=	main.cpp        \
+		Animal.cpp      \
+		Cat.cpp         \
+		Dog.cpp         \
+		WrongAnimal.cpp \
+		WrongCat.cpp    \
+		WrongDog.cpp    \
+
+OBJS	=	$(SRCS:.cpp=.o)
+
+CXX	=	clang++
+
+CXXFLAGS	=	-Wall -Werror -Wextra -std=c++98
+
+RM	=	rm -rf
+
+all: $(NAME)
+
+$(NAME): $(OBJS)
+		$(CXX) -o $(NAME) $(OBJS)
+
+.cpp.o:
+	$(CXX) $(CXXFLAGS) -c $<
+
+clean:
+	$(RM) $(OBJS)
+
+fclean: clean
+	$(RM) $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re

@@ -3,10 +3,12 @@
 
 int	main(void)
 {
+	std::cout << "| Welcome to the PhoneBook! |" << std::endl;
+	std::cout << std::endl;
+
 	PhoneBook	phoneBook;
 	std::string	command;
 
-	std::cout << "Welcome to the phone book!" << std::endl;
 	while (!std::cin.eof())
 	{
 		std::cout << "Enter a command: ADD, SEARCH or EXIT: " << std::endl;

@@ -6,30 +6,28 @@ PhoneBook::PhoneBook() //| Constutor
 {
 }
 
-void	getField(std::string &field, const std::string &message)
+PhoneBook::~PhoneBook() //| Destrutor
 {
+}
+
+std::string	getField(const std::string &message)
+{
+	std::string field;
 	do
 	{
 		std::cout << message << std::endl;
 		std::getline(std::cin, field);
 	}	while (!std::cin.eof() && field.empty());
+	return (field);
 }
 
 void	PhoneBook::addContact(void)
 {
-	std::string first_name;
-	std::string last_name;
-	std::string nickname;
-	std::string phone_number;
-	std::string darkest_secret;
-
-	getField(first_name, "Enter the first name: ");
-	getField(last_name, "Enter the last name: ");
-	getField(nickname, "Enter the nickname: ");
-	getField(phone_number, "Enter the phone number: ");
-	getField(darkest_secret, "Enter the darkest secret: ");
-
-	Contact contact(first_name, last_name, nickname, phone_number, darkest_secret);
+	Contact contact(getField("Enter the first name: "),
+			getField("Enter the last name: "),
+			getField("Enter the nickname: "),
+			getField("Enter the phone number: "),
+			getField("Enter the darkest secret: "));
 
 	static int i = 0;
 	this->_contacts[i] = contact;
@@ -64,8 +62,4 @@ void	PhoneBook::searchContact(void) const
 
 	int i = index[0] - '0';
 	this->_contacts[i].displayFull();
-}
-
-PhoneBook::~PhoneBook() //| Destrutor
-{
 }

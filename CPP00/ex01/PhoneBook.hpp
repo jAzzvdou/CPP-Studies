@@ -7,7 +7,6 @@ class PhoneBook
 {
         public:
                 PhoneBook(); //| Construtor
-
                 ~PhoneBook(); //| Destrutor
 
 		//|----------| Métodos |----------|//

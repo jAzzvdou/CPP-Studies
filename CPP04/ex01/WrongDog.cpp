@@ -15,7 +15,7 @@ WrongDog::WrongDog(const WrongDog &other):
 
 WrongDog::~WrongDog()
 {
-        std::cout << "*** WrongDog: (Default Destructor Called) ***" << std::endl;
+	std::cout << "*** WrongDog: (Default Destructor Called) ***" << std::endl;
 }
 
 WrongDog &WrongDog::operator=(const WrongDog &other)

@@ -21,7 +21,7 @@ WrongAnimal::WrongAnimal(const WrongAnimal &other):
 
 WrongAnimal::~WrongAnimal()
 {
-        std::cout << "{ WrongAnimal Destructor Called }" << std::endl;
+	std::cout << "{ WrongAnimal Destructor Called }" << std::endl;
 }
 
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &other)

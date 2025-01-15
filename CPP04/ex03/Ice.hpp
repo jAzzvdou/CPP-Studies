@@ -12,9 +12,8 @@ class Ice: public AMateria
 
 		Ice &operator=(const AMateria &other);
 
-		AMateria *clone(const AMateria &other);
+		AMateria *clone() const;
 		void use(ICharacter &target);
-	private:
 };
 
 #endif //| ICE_HPP

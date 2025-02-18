@@ -17,9 +17,9 @@ int	main(void)
 		j->makeSound();		//| (Bark Bark)
 		meta->makeSound();	//| | Animal Sound |
 
-		delete meta;
-		delete j;
-		delete i;
+		//delete meta;
+		//delete j;
+		//delete i;
 	}
 	{
 		const WrongAnimal* meta = new WrongAnimal();

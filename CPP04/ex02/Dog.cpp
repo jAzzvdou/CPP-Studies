@@ -2,17 +2,17 @@
 #include "Dog.hpp"
 
 Dog::Dog():
-        AAnimal("Dog"),
-	_brain(new Brain())
+        AAnimal("Dog")
 {
         std::cout << "Dog: (Default Constructor Called)" << std::endl;
+	this->_brain = new Brain();
 }
 
 Dog::Dog(const Dog &other):
-        AAnimal(other._type),
-	_brain(new Brain(*other._brain))
+        AAnimal(other._type)
 {
         std::cout << "Dog: (Copy Constructor Called)" << std::endl;
+	this->_brain = new Brain(*other._brain);
 }
 
 Dog::~Dog()

@@ -26,5 +26,5 @@ int	main()
 	delete me;
 	delete src;
 
-	return (0);
+	return 0;
 }

@@ -23,6 +23,11 @@ Character::Character(const Character &other):
 
 Character::~Character()
 {
+	for (int i = 0; i < 4; i++)
+	{
+		if (this->_spells[i])
+			delete this->_spells[i];
+	}
 }
 
 Character &Character::operator=(const Character &other)

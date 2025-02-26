@@ -2,17 +2,17 @@
 #include "Cat.hpp"
 
 Cat::Cat():
-	AAnimal("Cat"),
-	_brain(new Brain())
+	AAnimal("Cat")
 {
 	std::cout << "Cat: [Default Constructor Called]" << std::endl;
+	this->_brain = new Brain();
 }
 
 Cat::Cat(const Cat &other):
-	AAnimal(other._type),
-	_brain(new Brain(*other._brain))
+	AAnimal(other._type)
 {
 	std::cout << "Cat: [Copy Constructor Called]" << std::endl;
+	this->_brain = new Brain(*other._brain);
 }
 
 Cat::~Cat()

@@ -13,6 +13,11 @@ MateriaSource::MateriaSource(const MateriaSource &other)
 
 MateriaSource::~MateriaSource()
 {
+	for (int i = 0; i < 4; i++)
+	{
+		if (this->_spells[i])
+			delete this->_spells[i];
+	}
 }
 
 MateriaSource &MateriaSource::operator=(const MateriaSource &other)
@@ -23,7 +28,7 @@ MateriaSource &MateriaSource::operator=(const MateriaSource &other)
 		{
 			if (this->_spells[i])
 				delete this->_spells[i];
-			this->_spells[i] = other._spells[i]->clone();
+			this->_spells[i] = other._spells[i] ? other._spells[i]->clone() : NULL;
 		}
 	}
 	return (*this);
@@ -35,8 +40,8 @@ void MateriaSource::learnMateria(AMateria *m)
 	{
 		if (!this->_spells[i])
 		{
-			this->_spells[i] = m->clone();
-			break;
+			this->_spells[i] = m;
+			return ;
 		}
 	}
 }

@@ -9,7 +9,7 @@ class WrongAnimal
                 WrongAnimal();
 		WrongAnimal(const std::string &type);
                 WrongAnimal(const WrongAnimal &other);
-                ~WrongAnimal();
+                ~WrongAnimal(); //| Esse destrutor não é virtual, logo não é polimórfico.
 
                 WrongAnimal &operator=(const WrongAnimal &other);
 

@@ -9,8 +9,8 @@ int	main(void)
 	Dog dog;
 	dog.makeSound();
 
-	AAnimal aanimal;
-	aanimal.makeSound();
+	//AAnimal aanimal;
+	//aanimal.makeSound();
 
 	return (0);
 }

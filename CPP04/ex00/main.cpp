@@ -17,14 +17,14 @@ int	main(void)
 		j->makeSound();		//| (Bark Bark)
 		meta->makeSound();	//| | Animal Sound |
 
-		//delete meta;
-		//delete j;
-		//delete i;
+		delete meta;
+		delete j;
+		delete i;
 	}
 	{
 		const WrongAnimal* meta = new WrongAnimal();
-		const WrongAnimal* j = new WrongDog(); //| FAZER.
-		const WrongAnimal* i = new WrongCat(); //| FAZER.
+		const WrongAnimal* j = new WrongDog();
+		const WrongAnimal* i = new WrongCat();
 
 		std::cout << j->getType() << " " << std::endl;
 		std::cout << i->getType() << " " << std::endl;
@@ -36,6 +36,5 @@ int	main(void)
 		delete j;
 		delete i;
 	}
-
 	return (0);
 }

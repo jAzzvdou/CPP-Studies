@@ -2,6 +2,8 @@
 
 # include "Bureaucrat.hpp"
 
+class Bureaucrat;
+
 class Form
 {
 	public:
@@ -17,6 +19,7 @@ class Form
 		bool getSigned() const;
 		int getSignGrade() const;
 		int getExecGrade() const;
+
 		void beSigned(const Bureaucrat &bureaucrat);
 
 		class GradeTooHighException: public std::exception

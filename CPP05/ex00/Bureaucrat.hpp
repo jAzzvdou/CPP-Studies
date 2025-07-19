@@ -1,7 +1,7 @@
 #pragma once
 
-# include <iostream>
-# include <exception>
+# include <iostream>  //| string, cout
+# include <exception> //| exception
 
 class Bureaucrat
 {
@@ -18,6 +18,7 @@ class Bureaucrat
 		int getGrade(void) const;
 		void incrementGrade(void);
 		void decrementGrade(void);
+		void setGrade(int grade);
 
 		class GradeTooHighException: public std::exception
 		{

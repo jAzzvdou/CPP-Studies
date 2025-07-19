@@ -1,7 +1,10 @@
 #pragma once
 
-# include <iostream>
-# include <exception>
+# include <iostream>  //| string, cout
+# include <exception> //| exception
+# include "Form.hpp"
+
+class Form;
 
 class Bureaucrat
 {
@@ -14,10 +17,13 @@ class Bureaucrat
 
 		Bureaucrat &operator=(const Bureaucrat &other);
 
-		const std::string &getName() const;
-		int getGrade() const;
-		void incrementGrade();
-		void decrementGrade();
+		const std::string &getName(void) const;
+		int getGrade(void) const;
+		void incrementGrade(void);
+		void decrementGrade(void);
+		void setGrade(int grade);
+
+		void signForm(Form &form);
 
 		class GradeTooHighException: public std::exception
 		{

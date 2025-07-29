@@ -1,6 +1,7 @@
 #pragma once
 
 # include "AForm.hpp"
+# include <cstdlib> //| rand
 
 class RobotomyRequestForm : public AForm
 {

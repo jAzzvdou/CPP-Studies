@@ -1,6 +1,7 @@
 #pragma once
 
 # include "AForm.hpp"
+# include <fstream> //| std::ofstream
 
 class ShrubberyCreationForm : public AForm
 {

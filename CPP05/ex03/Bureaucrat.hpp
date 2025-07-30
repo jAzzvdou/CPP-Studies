@@ -43,3 +43,19 @@ class Bureaucrat
 };
 
 std::ostream &operator<<(std::ostream &os, const Bureaucrat &bureaucrat);
+
+/*
+
+ Classe Intern e o padrão de projeto Factory.
+
+ Intern: representa um estagiário que pode criar formulários (AForm) com base em uma string com o nome do formulário.
+ - A função makeForm() recebe o nome do formulário e o alvo como argumentos.
+ - Dependendo do nome, retorna uma instância de: 
+  - ShrubberyCreationForm
+  - RobotomyRequestForm
+  - PresidentialPardonForm
+ - Se o nome for inválido, uma exceção personalizada é lançada.
+
+ - O padrão Factory (ou Factory Method Pattern) é um padrão de projeto criacional que tem como objetivo encapsular a lógica de criação de objetos, permitindo que o código cliente (quem usa) não precise saber qual classe exata está sendo instanciada.
+
+*/

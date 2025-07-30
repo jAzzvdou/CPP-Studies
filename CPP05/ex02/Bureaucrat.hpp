@@ -43,3 +43,21 @@ class Bureaucrat
 };
 
 std::ostream &operator<<(std::ostream &os, const Bureaucrat &bureaucrat);
+
+/*
+
+ Herança, polimorfismo e exceções com a classe abstrata AForm.
+
+ AForm: representa um formulário genérico, que pode ser assinado e executado, mas não define o comportamento de execução (função execute é puramente virtual).
+ - AForm possui um nome, estado (assinado ou não), nota mínima para ser assinado (_signGrade) e nota mínima para ser executado (_execGrade).
+ - Bureaucrats podem tentar assiná-lo via beSigned(), e se o _grade não for suficiente, uma exceção é lançada.
+ - Para ser executado, o formulário precisa estar assinado e o Bureaucrat precisa ter nota suficiente. Caso contrário, exceções também são lançadas.
+
+ Três formulários são implementados, todos herdados de AForm:
+ - ShrubberyCreationForm: cria um arquivo com uma árvore ASCII.
+ - RobotomyRequestForm: "robotomiza" um alvo, com chance de 50% de sucesso.
+ - PresidentialPardonForm: "perdoa" um alvo em nome do presidente.
+
+ Transformar Form em AForm permite tratar os formulários de diferentes maneira, e exceções garante segurança na execução.
+
+*/

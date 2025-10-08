@@ -1,7 +1,7 @@
 NAME	=	FixedPoint
 
 SRCS	=	main.cpp  \
-		Fixed.cpp \
+			Fixed.cpp \
 
 OBJS	=	$(SRCS:.cpp=.o)
 

@@ -8,8 +8,7 @@
 #define GRAY "\033[37m"
 #define RESET "\033[0m"
 
-ScavTrap::ScavTrap():
-	ClapTrap()
+ScavTrap::ScavTrap(): ClapTrap()
 {
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
@@ -17,8 +16,7 @@ ScavTrap::ScavTrap():
 	std::cout << "ScavTrap: [ Default Constructor Called ]" << std::endl;
 }
 
-ScavTrap::ScavTrap(const std::string &name):
-			ClapTrap(name)
+ScavTrap::ScavTrap(const std::string &name): ClapTrap(name)
 {
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
@@ -26,13 +24,9 @@ ScavTrap::ScavTrap(const std::string &name):
 	std::cout << "* ScavTrap " << GREEN << this->_name << RESET << " is born! *" << std::endl;
 }
 
-ScavTrap::~ScavTrap()
-{
-	std::cout << "ScavTrap: [ Default Destructor Called ]" << std::endl;
-}
+ScavTrap::~ScavTrap() { std::cout << "ScavTrap: [ Default Destructor Called ]" << std::endl; }
 
-ScavTrap::ScavTrap(const ScavTrap &other):
-			ClapTrap(other)
+ScavTrap::ScavTrap(const ScavTrap &other): ClapTrap(other)
 {
 	std::cout << "ScavTrap: [ Copy Constructor Called ]" << std::endl;
 	*this = other;

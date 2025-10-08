@@ -1,7 +1,7 @@
 NAME	=	ClassOrthodoxCanonicalForm
 
 SRCS	=	main.cpp  \
-		Fixed.cpp \
+			Fixed.cpp \
 
 OBJS	=	$(SRCS:.cpp=.o)
 

@@ -1,9 +1,9 @@
 NAME	=	BSP
 
 SRCS	=	main.cpp  \
-		Fixed.cpp \
-		Point.cpp \
-		bsp.cpp   \
+			Fixed.cpp \
+			Point.cpp \
+			bsp.cpp   \
 
 OBJS	=	$(SRCS:.cpp=.o)
 

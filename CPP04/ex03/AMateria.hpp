@@ -1,5 +1,4 @@
-#ifndef AMATERIA_HPP
-# define AMATERIA_HPP
+#pragma once
 
 # include "ICharacter.hpp"
 
@@ -16,10 +15,9 @@ class AMateria
 		const std::string &getType() const;
 		virtual AMateria *clone() const = 0;
 		virtual void use(ICharacter &target);
+
 	protected:
 		std::string _type;
 };
-
-#endif //| AMATERIA_HPP
 
 //| AMateria é uma classe abstrada e só conseguiremos instanciá-la na classe ICE e CURE.

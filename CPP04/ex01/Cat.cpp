@@ -1,19 +1,9 @@
 #include <iostream>
 #include "Cat.hpp"
 
-Cat::Cat():
-	Animal("Cat"),
-	_brain(new Brain())
-{
-	std::cout << "Cat: [Default Constructor Called]" << std::endl;
-}
+Cat::Cat(): Animal("Cat"), _brain(new Brain()) { std::cout << "Cat: [Default Constructor Called]" << std::endl; }
 
-Cat::Cat(const Cat &other):
-	Animal(other._type),
-	_brain(new Brain(*other._brain))
-{
-	std::cout << "Cat: [Copy Constructor Called]" << std::endl;
-}
+Cat::Cat(const Cat &other): Animal(other._type), _brain(new Brain(*other._brain)) { std::cout << "Cat: [Copy Constructor Called]" << std::endl; }
 
 Cat::~Cat()
 {
@@ -34,7 +24,4 @@ Cat &Cat::operator=(const Cat &other)
 	return (*this);
 }
 
-void Cat::makeSound() const
-{
-	std::cout << "Cat: [Meow Meow]" << std::endl;
-}
+void Cat::makeSound() const { std::cout << "Cat: [Meow Meow]" << std::endl; }

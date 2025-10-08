@@ -1,5 +1,4 @@
-#ifndef FIXED_HPP
-# define FIXED_HPP
+#pragma once
 
 # include <iostream>
 
@@ -41,11 +40,10 @@ class Fixed
 		static const Fixed &min(const Fixed &f1, const Fixed &f2);
 		static Fixed &max(Fixed &f1, Fixed &f2);
 		static const Fixed &max(const Fixed &f1, const Fixed &f2);
+
 	private:
 		int _value;
 		static const int _fractionalBits = 8;
 };
 
 std::ostream &operator<<(std::ostream &out, const Fixed &f);
-
-#endif //| FIXED_HPP

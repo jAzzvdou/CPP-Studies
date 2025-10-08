@@ -1,7 +1,7 @@
 NAME	=	SedIsForLosers
 
 SRCS	=	main.cpp    \
-		Replace.cpp \
+			Replace.cpp \
 
 OBJS	=	$(SRCS:.cpp=.o)
 

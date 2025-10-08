@@ -1,9 +1,9 @@
 NAME	=	Zombie
 
 SRCS	=	main.cpp        \
-		Zombie.cpp      \
-		newZombie.cpp	\
-		randomChump.cpp \
+			Zombie.cpp      \
+			newZombie.cpp	\
+			randomChump.cpp \
 
 OBJS	=	$(SRCS:.cpp=.o)
 

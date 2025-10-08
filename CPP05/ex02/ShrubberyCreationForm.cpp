@@ -36,7 +36,4 @@ void ShrubberyCreationForm::execute(const Bureaucrat &executor) const
 	file.close();
 }
 
-const char *ShrubberyCreationForm::FileNotOpenException::what() const throw()
-{
-	return ("Error: file could not be opened.");
-}
+const char *ShrubberyCreationForm::FileNotOpenException::what() const throw() { return ("Error: file could not be opened."); }

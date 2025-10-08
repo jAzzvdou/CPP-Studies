@@ -1,19 +1,9 @@
 #include <iostream>
 #include "Dog.hpp"
 
-Dog::Dog():
-        Animal("Dog"),
-	_brain(new Brain())
-{
-        std::cout << "Dog: (Default Constructor Called)" << std::endl;
-}
+Dog::Dog(): Animal("Dog"), _brain(new Brain()) { std::cout << "Dog: (Default Constructor Called)" << std::endl; }
 
-Dog::Dog(const Dog &other):
-        Animal(other._type),
-	_brain(new Brain(*other._brain))
-{
-        std::cout << "Dog: (Copy Constructor Called)" << std::endl;
-}
+Dog::Dog(const Dog &other): Animal(other._type), _brain(new Brain(*other._brain)) { std::cout << "Dog: (Copy Constructor Called)" << std::endl; }
 
 Dog::~Dog()
 {
@@ -34,7 +24,4 @@ Dog &Dog::operator=(const Dog &other)
         return (*this);
 }
 
-void Dog::makeSound() const
-{
-        std::cout << "Dog: (Bark Bark)" << std::endl;
-}
+void Dog::makeSound() const { std::cout << "Dog: (Bark Bark)" << std::endl; }

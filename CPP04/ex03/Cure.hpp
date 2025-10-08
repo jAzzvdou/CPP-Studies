@@ -1,5 +1,4 @@
-#ifndef CURE_HPP
-# define CURE_HPP
+#pragma once
 
 # include "AMateria.hpp"
 
@@ -15,5 +14,3 @@ class Cure: public AMateria
 		AMateria *clone() const;
 		void use(ICharacter &target);
 };
-
-#endif //| CURE_HPP

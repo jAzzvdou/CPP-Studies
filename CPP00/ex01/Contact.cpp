@@ -2,9 +2,7 @@
 #include <iomanip>
 #include "Contact.hpp"
 
-Contact::Contact() //| Construtor
-{
-}
+Contact::Contact() {} //| Construtor
 
 Contact::Contact(const std::string &first_name,
 		 const std::string &last_name,
@@ -16,8 +14,7 @@ Contact::Contact(const std::string &first_name,
 		 _nickname(nickname),
 		 _phone_number(phone_number),
 		 _darkest_secret(darkest_secret)
-{
-}
+{}
 
 std::string verifyLength(const std::string &field)
 {
@@ -42,6 +39,4 @@ void Contact::displayFull(void) const
 	std::cout << "Darkest Secret: " << this->_darkest_secret << std::endl;
 }
 
-Contact::~Contact() //| Destrutor
-{
-}
+Contact::~Contact() {} //| Destrutor

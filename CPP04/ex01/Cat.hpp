@@ -1,5 +1,4 @@
-#ifndef CAT_HPP
-# define CAT_HPP
+#pragma once
 
 # include "Animal.hpp"
 # include "Brain.hpp"
@@ -14,8 +13,7 @@ class Cat: public Animal
 		Cat &operator=(const Cat &other);
 
 		void makeSound() const;
+
 	private:
 		Brain *_brain;
 };
-
-#endif //| CAT_HPP

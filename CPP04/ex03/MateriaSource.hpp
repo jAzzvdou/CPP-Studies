@@ -1,5 +1,4 @@
-#ifndef MATERIASOURCE_HPP
-# define MATERIASOURCE_HPP
+#pragma once
 
 # include "IMateriaSource.hpp"
 
@@ -14,8 +13,8 @@ class MateriaSource: public IMateriaSource
 
 		void learnMateria(AMateria *m);
 		AMateria *createMateria(const std::string &type);
+
 	private:
 		AMateria *_spells[4];
 };
 
-#endif //| MATERIASOURCE_HPP

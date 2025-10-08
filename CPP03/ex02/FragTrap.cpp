@@ -8,8 +8,7 @@
 #define GRAY "\033[37m"
 #define RESET "\033[0m"
 
-FragTrap::FragTrap():
-        ClapTrap()
+FragTrap::FragTrap(): ClapTrap()
 {
         this->_hitPoints = 100;
         this->_energyPoints = 100;
@@ -17,8 +16,7 @@ FragTrap::FragTrap():
         std::cout << "FragTrap: { Default Constructor Called }" << std::endl;
 }
 
-FragTrap::FragTrap(const std::string &name):
-                        ClapTrap(name)
+FragTrap::FragTrap(const std::string &name): ClapTrap(name)
 {
         this->_hitPoints = 100;
         this->_energyPoints = 100;
@@ -26,13 +24,9 @@ FragTrap::FragTrap(const std::string &name):
         std::cout << "# FragTrap " << GREEN << this->_name << RESET << " is born! #" << std::endl;
 }
 
-FragTrap::~FragTrap()
-{
-        std::cout << "FragTrap: { Default Destructor Called }" << std::endl;
-}
+FragTrap::~FragTrap() { std::cout << "FragTrap: { Default Destructor Called }" << std::endl; }
 
-FragTrap::FragTrap(const FragTrap &other):
-                        ClapTrap(other)
+FragTrap::FragTrap(const FragTrap &other): ClapTrap(other)
 {
         std::cout << "FragTrap: { Copy Constructor Called }" << std::endl;
         *this = other;
@@ -47,7 +41,4 @@ FragTrap &FragTrap::operator=(const FragTrap &other)
         return (*this);
 }
 
-void FragTrap::highFivesGuys(void)
-{
-	std::cout << this->_name << ", its high fives time! (^.^)" << std::endl;
-}
+void FragTrap::highFivesGuys(void) { std::cout << this->_name << ", its high fives time! (^.^)" << std::endl; }

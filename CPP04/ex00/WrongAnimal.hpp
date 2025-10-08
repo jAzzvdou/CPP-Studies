@@ -1,22 +1,20 @@
-#ifndef WRONGANIMAL_HPP
-# define WRONGANIMAL_HPP
+#pragma once
 
 # include <string>
 
 class WrongAnimal
 {
-        public:
-                WrongAnimal();
+    public:
+        WrongAnimal();
 		WrongAnimal(const std::string &type);
-                WrongAnimal(const WrongAnimal &other);
-                ~WrongAnimal(); //| Esse destrutor não é virtual, logo não é polimórfico.
+        WrongAnimal(const WrongAnimal &other);
+        ~WrongAnimal(); //| Esse destrutor não é virtual, logo não é polimórfico.
 
-                WrongAnimal &operator=(const WrongAnimal &other);
+        WrongAnimal &operator=(const WrongAnimal &other);
 
-                std::string getType() const; //| Somente para printar o tipo do animal.
-                void makeSound() const; //| NÃO TEM VIRTUAL NESSA CLASSE.
-        protected:
-                std::string _type;
+        std::string getType() const; //| Somente para printar o tipo do animal.
+        void makeSound() const; //| NÃO TEM VIRTUAL NESSA CLASSE.
+
+    protected:
+        std::string _type;
 };
-
-#endif //| WRONGANIMAL_HPP

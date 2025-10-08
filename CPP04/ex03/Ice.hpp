@@ -1,5 +1,4 @@
-#ifndef ICE_HPP
-# define ICE_HPP
+#pragma once
 
 # include "AMateria.hpp"
 
@@ -15,5 +14,3 @@ class Ice: public AMateria
 		AMateria *clone() const;
 		void use(ICharacter &target);
 };
-
-#endif //| ICE_HPP

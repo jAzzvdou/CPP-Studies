@@ -8,10 +8,7 @@
 #define GRAY "\033[37m"
 #define RESET "\033[0m"
 
-DiamondTrap::DiamondTrap():
-	ClapTrap(),
-	ScavTrap(),
-	FragTrap()
+DiamondTrap::DiamondTrap(): ClapTrap(), ScavTrap(), FragTrap()
 {
 	this->_hitPoints = FragTrap::_hitPoints;
 	this->_energyPoints = ScavTrap::_energyPoints;
@@ -19,11 +16,7 @@ DiamondTrap::DiamondTrap():
 	std::cout << "DiamondTrap: ( Default Constructor Called )" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(const std::string &name):
-	ClapTrap(name + "_clap_name"),
-	ScavTrap(name),
-	FragTrap(name),
-	_name(name)
+DiamondTrap::DiamondTrap(const std::string &name): ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name), _name(name)
 {
 	this->_hitPoints = FragTrap::_hitPoints;
 	this->_energyPoints = ScavTrap::_energyPoints;
@@ -31,15 +24,9 @@ DiamondTrap::DiamondTrap(const std::string &name):
 	std::cout << "° DiamondTrap " << GREEN << this->_name << RESET << " is born! °" << std::endl;
 }
 
-DiamondTrap::~DiamondTrap()
-{
-	std::cout << "DiamondTrap: ( Default Destructor Called )" << std::endl;
-}
+DiamondTrap::~DiamondTrap() { std::cout << "DiamondTrap: ( Default Destructor Called )" << std::endl; }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &other):
-				ClapTrap(other),
-				ScavTrap(other),
-				FragTrap(other)
+DiamondTrap::DiamondTrap(const DiamondTrap &other): ClapTrap(other), ScavTrap(other), FragTrap(other)
 {
 	std::cout << "( Copy Constructor Called )" << std::endl;
 	*this = other;
@@ -59,7 +46,4 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &other)
 	return (*this);
 }
 
-void DiamondTrap::whoAmI()
-{
-	std::cout << "Hi! I am " << this->_name << " and my ClapTrap name is " << this->ClapTrap::_name << "!" << std::endl;
-}
+void DiamondTrap::whoAmI() { std::cout << "Hi! I am " << this->_name << " and my ClapTrap name is " << this->ClapTrap::_name << "!" << std::endl; }

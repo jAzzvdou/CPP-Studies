@@ -1,5 +1,4 @@
-#ifndef BRAIN_HPP
-# define BRAIN_HPP
+#pragma once
 
 # include <string>
 
@@ -11,8 +10,7 @@ class Brain
 		~Brain();
 
 		Brain &operator=(const Brain &other);
+
 	private:
 		std::string _ideas[100];
 };
-
-#endif //| BRAIN_HPP

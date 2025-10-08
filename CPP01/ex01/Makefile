@@ -1,8 +1,8 @@
 NAME	=	zombieHorde
 
 SRCS	=	main.cpp        \
-		Zombie.cpp      \
-		zombieHorde.cpp \
+			Zombie.cpp      \
+			zombieHorde.cpp \
 
 OBJS	=	$(SRCS:.cpp=.o)
 

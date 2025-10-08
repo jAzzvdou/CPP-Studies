@@ -1,5 +1,4 @@
-#ifndef POINT_HPP
-# define POINT_HPP
+#pragma once
 
 # include "Fixed.hpp"
 
@@ -15,9 +14,8 @@ class Point
 
 		Fixed getX(void) const;
 		Fixed getY(void) const;
+
 	private:
 		const Fixed _x;
 		const Fixed _y;
 };
-
-#endif //| POINT_HPP

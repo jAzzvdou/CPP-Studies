@@ -1,19 +1,17 @@
-#ifndef WRONGCAT_HPP
-# define WRONGCAT_HPP
+#pragma once
 
 # include "WrongAnimal.hpp"
 
 class WrongCat: public WrongAnimal
 {
-        public:
-                WrongCat();
-                WrongCat(const WrongCat &other);
-                ~WrongCat();
+    public:
+    	WrongCat();
+        WrongCat(const WrongCat &other);
+        ~WrongCat();
 
-                WrongCat &operator=(const WrongCat &other);
+        WrongCat &operator=(const WrongCat &other);
 
-                void makeSound() const;
-        private:
+        void makeSound() const;
+
+    private:
 };
-
-#endif //| WRONGCAT_HPP

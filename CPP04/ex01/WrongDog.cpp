@@ -1,22 +1,11 @@
 #include <iostream>
 #include "WrongDog.hpp"
 
-WrongDog::WrongDog():
-        WrongAnimal("WrongDog")
-{
-        std::cout << "*** WrongDog: (Default Constructor Called) ***" << std::endl;
-}
+WrongDog::WrongDog(): WrongAnimal("WrongDog") { std::cout << "*** WrongDog: (Default Constructor Called) ***" << std::endl; }
 
-WrongDog::WrongDog(const WrongDog &other):
-        WrongAnimal(other._type)
-{
-        std::cout << "*** WrongDog: (Copy Constructor Called) ***" << std::endl;
-}
+WrongDog::WrongDog(const WrongDog &other): WrongAnimal(other._type) { std::cout << "*** WrongDog: (Copy Constructor Called) ***" << std::endl; }
 
-WrongDog::~WrongDog()
-{
-	std::cout << "*** WrongDog: (Default Destructor Called) ***" << std::endl;
-}
+WrongDog::~WrongDog() { std::cout << "*** WrongDog: (Default Destructor Called) ***" << std::endl; }
 
 WrongDog &WrongDog::operator=(const WrongDog &other)
 {
@@ -27,7 +16,4 @@ WrongDog &WrongDog::operator=(const WrongDog &other)
         return (*this);
 }
 
-void WrongDog::makeSound() const
-{
-        std::cout << "*** WrongDog: (Bark Bark) ***" << std::endl;
-}
+void WrongDog::makeSound() const { std::cout << "*** WrongDog: (Bark Bark) ***" << std::endl; }

@@ -1,19 +1,11 @@
 #include <iostream>
 #include "Cure.hpp"
 
-Cure::Cure():
-	AMateria("cure")
-{
-}
+Cure::Cure(): AMateria("cure") {}
 
-Cure::Cure(const AMateria &other):
-	AMateria(other)
-{
-}
+Cure::Cure(const AMateria &other): AMateria(other) {}
 
-Cure::~Cure()
-{
-}
+Cure::~Cure() {}
 
 Cure &Cure::operator=(const AMateria &other)
 {
@@ -22,12 +14,6 @@ Cure &Cure::operator=(const AMateria &other)
 	return (*this);
 }
 
-AMateria *Cure::clone() const
-{
-	return (new Cure(*this));
-}
+AMateria *Cure::clone() const { return (new Cure(*this)); }
 
-void Cure::use(ICharacter &target)
-{
-	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
-}
+void Cure::use(ICharacter &target) { std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl; }

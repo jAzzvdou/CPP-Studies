@@ -1,5 +1,4 @@
-#ifndef AANIMAL_HPP
-# define AANIMAL_HPP
+#pragma once
 
 # include <string>
 
@@ -13,10 +12,9 @@ class AAnimal
 
 		AAnimal &operator=(const AAnimal &other);
 
-		std::string getType() const; //| Somente para printar o tipo do animal.
+		std::string getType() const;		//| Somente para printar o tipo do animal.
 		virtual void makeSound() const = 0; //| Transforma a classe em abstrada, ou seja, não pode ser instanciada diretamente.
+
 	protected:
 		std::string _type;
 };
-
-#endif //| AANIMAL_HPP

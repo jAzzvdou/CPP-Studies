@@ -1,19 +1,11 @@
 #include <iostream>
 #include "HumanB.hpp"
 
-HumanB::HumanB(const std::string &name): //| Construtor
-		_name(name)
-{
-}
+HumanB::HumanB(const std::string &name): _name(name) {} //| Construtor
 
-HumanB::~HumanB() //| Destrutor
-{
-}
+HumanB::~HumanB() {} //| Destrutor
 
-void HumanB::setWeapon(const Weapon &weapon) //| Setter
-{
-	this->_weapon = &weapon;
-}
+void HumanB::setWeapon(const Weapon &weapon) { this->_weapon = &weapon; } //| Setter
 
 void HumanB::attack() const //| Método
 {

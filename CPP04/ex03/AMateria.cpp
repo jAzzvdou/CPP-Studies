@@ -1,24 +1,13 @@
 #include <iostream>
 #include "AMateria.hpp"
 
-AMateria::AMateria():
-		_type("Default")
-{
-}
+AMateria::AMateria(): _type("Default") {}
 
-AMateria::AMateria(const std::string &type):
-				_type(type)
-{
-}
+AMateria::AMateria(const std::string &type): _type(type) {}
 
-AMateria::AMateria(const AMateria &other):
-			_type(other._type)
-{
-}
+AMateria::AMateria(const AMateria &other): _type(other._type) {}
 
-AMateria::~AMateria()
-{
-}
+AMateria::~AMateria() {}
 
 AMateria &AMateria::operator=(const AMateria &other)
 {
@@ -27,12 +16,6 @@ AMateria &AMateria::operator=(const AMateria &other)
 	return (*this);
 }
 
-const std::string &AMateria::getType() const
-{
-	return (this->_type);
-}
+const std::string &AMateria::getType() const { return (this->_type); }
 
-void AMateria::use(ICharacter &target)
-{
-	std::cout << "* use on " << target.getName() << " *" << std::endl;
-}
+void AMateria::use(ICharacter &target) { std::cout << "* use on " << target.getName() << " *" << std::endl; }

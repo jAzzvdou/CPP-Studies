@@ -1,8 +1,8 @@
 NAME	=	ScavTrap
 
 SRCS	=	main.cpp     \
-		ClapTrap.cpp \
-		ScavTrap.cpp \
+			ClapTrap.cpp \
+			ScavTrap.cpp \
 
 OBJS	=	$(SRCS:.cpp=.o)
 

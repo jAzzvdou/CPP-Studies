@@ -2,13 +2,9 @@
 #include <iomanip>
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook() //| Constutor
-{
-}
+PhoneBook::PhoneBook() {} //| Construtor
 
-PhoneBook::~PhoneBook() //| Destrutor
-{
-}
+PhoneBook::~PhoneBook() {} //| Destrutor
 
 std::string	getField(const std::string &message)
 {

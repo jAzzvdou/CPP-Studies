@@ -10,10 +10,7 @@ void handleGradeError(int grade)
 		throw (Bureaucrat::GradeTooLowException());
 }
 
-Bureaucrat::Bureaucrat(const std::string &name, int grade): _name(name), _grade(grade)
-{
-	handleGradeError(this->_grade);
-}
+Bureaucrat::Bureaucrat(const std::string &name, int grade): _name(name), _grade(grade) { handleGradeError(this->_grade); }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &other): _name(other._name), _grade(other._grade) {}
 

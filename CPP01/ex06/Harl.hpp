@@ -1,5 +1,4 @@
-#ifndef HARL_HPP
-# define HARL_HPP
+#pragma once
 
 # include <string>
 
@@ -17,5 +16,3 @@ class Harl
 		void warning( void ) const;
 		void error( void ) const;
 };
-
-#endif //| HARL_HPP

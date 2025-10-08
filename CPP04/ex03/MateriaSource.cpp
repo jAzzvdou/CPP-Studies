@@ -6,10 +6,7 @@ MateriaSource::MateriaSource()
 		this->_spells[i] = NULL;
 }
 
-MateriaSource::MateriaSource(const MateriaSource &other)
-{
-	*this = other;
-}
+MateriaSource::MateriaSource(const MateriaSource &other) { *this = other; }
 
 MateriaSource::~MateriaSource()
 {

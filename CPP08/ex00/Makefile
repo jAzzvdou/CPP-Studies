@@ -1,7 +1,6 @@
-NAME	=	Identify
+NAME	=	EasyFind
 
-SRCS	=	main.cpp \
-			Base.cpp
+SRCS	=	main.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 

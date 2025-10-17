@@ -31,6 +31,8 @@ int AForm::getExecGrade() const { return (this->_execGrade); }
 
 void AForm::beSigned(const Bureaucrat &bureaucrat)
 {
+    if (this->_signed)
+		throw (AForm::SignedException());
     if (bureaucrat.getGrade() > this->_signGrade)
         throw (AForm::GradeTooLowException());
     this->_signed = true;
@@ -38,8 +40,6 @@ void AForm::beSigned(const Bureaucrat &bureaucrat)
 
 void AForm::execute(const Bureaucrat &executor) const
 {
-	if (this->_signed)
-		throw (AForm::SignedException());
 	if (executor.getGrade() > this->_execGrade)
 		throw (AForm::GradeTooLowException());
 }

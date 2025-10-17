@@ -1,7 +1,7 @@
-NAME	=	Identify
+NAME	=	Span
 
 SRCS	=	main.cpp \
-			Base.cpp
+			Span.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 

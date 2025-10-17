@@ -5,6 +5,7 @@ int main(void)
 	std::cout << "Testing type identification with dynamic_cast" << std::endl;
 	std::cout << "=============================================" << std::endl;
 
+	//| Gerando 10 objetos aleatórios e identificando seus tipos
 	for (int i = 0; i < 10; i++)
 	{
 		Base *ptr = generate();
@@ -21,6 +22,7 @@ int main(void)
 		delete ptr;
 	}
 
+	//| Testando com tipos conhecidos
 	std::cout << "Testing with known types:" << std::endl;
 	
 	A a;

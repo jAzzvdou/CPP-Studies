@@ -54,8 +54,6 @@ class Array
  - Usa new[] para alocação de memória
  - Implementa cópia profunda (deep copy)
  - Verifica limites antes de acessar elementos
- - Funciona com qualquer tipo de dados
- - Segue o Formato Canonical Ortodoxo
 
 */
 

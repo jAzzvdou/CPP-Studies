@@ -5,7 +5,7 @@
 int main(void)
 {
 	{
-		std::cout << "RUNNING SUBJECT MAIN" << std::endl;
+		std::cout << "Subject main test" << std::endl;
 		MutantStack<int> mstack;
 		mstack.push(5);
 		mstack.push(17);
@@ -30,7 +30,7 @@ int main(void)
 		std::cout << std::endl;
 	}
 	{
-		std::cout << "RUNNING ADDITIONAL TESTS" << std::endl;
+		std::cout << "Other tests:" << std::endl;
 		MutantStack<int> mutantStack;
 
 		mutantStack.push(10);

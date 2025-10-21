@@ -55,15 +55,15 @@ class Span
 
  Exercício 01: Span
 
- Esta classe implementa um container que armazena números inteiros e calcula o menor e maior span entre eles.
+ Esta classe implementa um container que armazena números inteiros e calcula a menor e a maior diferença entre eles.
 
  Funcionalidades principais:
  - Armazena até N números inteiros (N definido no construtor)
  - addNumber(int): adiciona um número individual
  - addNumbers(Iterator, Iterator): adiciona múltiplos números usando iteradores
- - shortestSpan(): encontra o menor span entre números
- - longestSpan(): encontra o maior span entre números
- - Exceções para container cheio e spans impossíveis (menor que 2 números)
+ - shortestSpan(): encontra a menor diferença entre dois números do Span
+ - longestSpan(): encontra a maior diferença entre dois números do Span
+ - Exceções para container cheio e diferenças impossíveis (menor que 2 números)
 
  Características:
  - Usa std::vector para armazenamento eficiente

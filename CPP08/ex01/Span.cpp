@@ -30,16 +30,25 @@ unsigned int Span::shortestSpan() const
 {
 	if (size() < 2)
 		throw (Span::NoSpanException());
-	
-	return (this->_numbers.back());
+
+	//| Encontra a menor diferença entre dois números adjacentes
+	unsigned int minDiff = (unsigned int)(this->_numbers[1] - this->_numbers[0]);
+	for (size_t i = 1; i < this->_numbers.size(); ++i)
+	{
+		unsigned int diff = static_cast<unsigned int>(this->_numbers[i] - this->_numbers[i - 1]);
+		if (diff < minDiff)
+			minDiff = diff;
+	}
+	return (minDiff);
 }
 
 unsigned int Span::longestSpan() const
 {
 	if (size() < 2)
 		throw (Span::NoSpanException());
-	
-	return (this->_numbers.front());
+
+	//| Encontra a maior diferença entre o primeiro e o último número
+	return (static_cast<unsigned int>(this->_numbers.back() - this->_numbers.front()));
 }
 
 unsigned int Span::size() const { return (this->_numbers.size()); }
